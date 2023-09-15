@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="Z549_SUPERMERCADOS_SRV" xml:lang="pt" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Material" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Productid" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="PRODUCTID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Marca" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="MARCA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Descricao" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="DESCRICAO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Barcode" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="BARCODE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Peso" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="PESO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Uom" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="UOM" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Precos" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Valor" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="2" sap:unicode="false" sap:label="PRECO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Moeda" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="MOEDA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="Data" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="DATA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Hora" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="HORA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Solicitacao" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DataSolicitacao" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="DATA_SOLICITACAO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraSolicitacao" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="HORA_SOLICITACAO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Material" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="MATERIAL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="STATUS" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DataAprovacao" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="DATA_APROVACAO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraAprovacao" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="HORA_APROVACAO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Aprovador" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="APROVADOR" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PrecoNovo" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="10" sap:unicode="false" sap:label="Preço Novo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="Z549_SUPERMERCADOS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="MaterialSet" EntityType="Z549_SUPERMERCADOS_SRV.Material" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="PrecosSet" EntityType="Z549_SUPERMERCADOS_SRV.Precos" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="SolicitacaoSet" EntityType="Z549_SUPERMERCADOS_SRV.Solicitacao" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/Z549_SUPERMERCADOS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/Z549_SUPERMERCADOS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

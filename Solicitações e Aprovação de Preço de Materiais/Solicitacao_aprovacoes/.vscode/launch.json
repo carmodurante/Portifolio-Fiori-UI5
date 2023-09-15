@@ -1,0 +1,85 @@
+{
+    "configurations": [
+        {
+            "name": "Start solicitacao_aprovacao",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/solicitacao_aprovacao",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#carmo5495psolicitacaoaprovacao-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start solicitacao_aprovacao Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/solicitacao_aprovacao",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#carmo5495psolicitacaoaprovacao-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start solicitacao_aprovacao Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/solicitacao_aprovacao",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#carmo5495psolicitacaoaprovacao-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false"
+            }
+        }
+    ],
+    "compounds": []
+}

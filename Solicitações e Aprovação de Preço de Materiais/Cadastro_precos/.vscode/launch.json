@@ -1,0 +1,85 @@
+{
+    "configurations": [
+        {
+            "name": "Start cadastroprecos",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/cadastroprecos",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#carmo5495pcadastroprecos-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start cadastroprecos Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/cadastroprecos",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#carmo5495pcadastroprecos-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start cadastroprecos Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/cadastroprecos",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#carmo5495pcadastroprecos-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false"
+            }
+        }
+    ],
+    "compounds": []
+}
