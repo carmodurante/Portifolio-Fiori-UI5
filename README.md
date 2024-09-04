@@ -2,7 +2,6 @@
 
 Projetos e Aplicativos Fiori Desenvolvidos em UI5
 
-SAP Build APPS
 https://github.com/user-attachments/assets/bdb36720-e7fd-492b-b633-2b489387b21a
 
 
