@@ -1,6 +1,6 @@
 # Portifolio Fiori
 
-Projetos e Aplicativos Fiori Desenvolvidos em UI5
+Projetos e Aplicativos Fiori
 
 https://github.com/user-attachments/assets/bdb36720-e7fd-492b-b633-2b489387b21a
 
