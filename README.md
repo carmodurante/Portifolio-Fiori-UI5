@@ -1,4 +1,4 @@
-# Portifolio Fiori e UI5
+# Portifolio Fiori
 
 Projetos e Aplicativos Fiori Desenvolvidos em UI5
 
